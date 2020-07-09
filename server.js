@@ -8,6 +8,9 @@ const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
 
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/authors')
 const bookRouter = require('./routes/books')
